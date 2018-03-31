@@ -1,6 +1,6 @@
-# ASL
+# Assignment: Set up Symfony
 
-This Repository will be a bundle of assignments from my Advanced Server-Side Language course. Various assignments utilizing Nodejs and Symfony will be found within this repository.
+This assignment consists of an initial setup for Symfony. Within this you will find all the files required for a symfony project as well as 5 pages (Home, About, Contact, Register, & FAQ) each with their own unique data being passed and a navigation built with Bootstrap.
 
 ### Contact
 
@@ -12,5 +12,4 @@ This Repository will be a bundle of assignments from my Advanced Server-Side Lan
 #### Built With
 
 * [Symfony](https://symfony.com/) - The PHP framework used
-* [NodeJS](https://nodejs.org/en/) - The Server-Side JavaScript framework used
 * [Bootstrap](http://getbootstrap.com/) - The front-end framework used
