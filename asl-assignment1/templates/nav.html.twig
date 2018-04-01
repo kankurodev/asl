@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" style="border-top-left-radius: 0; border-top-right-radius: 0;">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
@@ -16,11 +16,11 @@
                 {# Loop through the nav array to display navigation #}
                 {% for key,value in nav %}
 
-                    {# Highlight current location in nav #}
+                    {# Highlight current location in nav when needed #}
                     {% if app.request.pathInfo == value %}
-                        <li class="active h4"><a class="" href='{{ value }}'>{{ key }}</a></li>
+                        <li class="active h4"><a href='{{ value }}' style="border-radius:4px;">{{ key }}</a></li>
                     {% else %}
-                        <li class="h4"><a class="" href='{{ value }}'>{{ key }}</a></li>
+                        <li class="h4"><a href='{{ value }}'>{{ key }}</a></li>
                     {% endif %}
 
                 {% endfor %}
