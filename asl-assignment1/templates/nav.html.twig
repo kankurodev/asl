@@ -1,0 +1,30 @@
+<nav class="navbar navbar-inverse" style="border-top-left-radius: 0; border-top-right-radius: 0;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand h4" href="#">Brand</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav" style="margin-left:3em;">
+
+                {# Loop through the nav array to display navigation #}
+                {% for key,value in nav %}
+
+                    {# Highlight current location in nav when needed #}
+                    {% if app.request.pathInfo == value %}
+                        <li class="active h4"><a href='{{ value }}' style="border-radius:4px;">{{ key }}</a></li>
+                    {% else %}
+                        <li class="h4"><a href='{{ value }}'>{{ key }}</a></li>
+                    {% endif %}
+
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>
