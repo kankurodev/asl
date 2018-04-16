@@ -2,9 +2,11 @@ extends layout
 
 block content
   div.container
+    //Check if message exists
     if message
+      //If message exists then display it
       div.alert.alert-success.alert-dismissible.fade.show.mt-3(role="alert")
         button.close.p-0.mr-2(type="button" data-dismiss="alert" aria-label="Close")
           span.h5.p-0(aria-hidden="true") &times;
-        p.h4= message
-    h1.mt-3= title
+        p.h6.mb-0= message
+    h1.mt-3.text-white= title
