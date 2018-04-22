@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap-grid.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+  body.container.text-white
+    //Create navigation
+    nav.navbar.navbar-expand-md.navbar-light.bg-light.rounded(role="navigation")
+      button.navbar-toggler(type='button' data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      div.collapse.navbar-collapse(id="navbar")
+        ul.navbar-nav.mr-auto
+          if navItems
+            each  nav in navItems
+              li(class=title==nav.content?'active nav-item':'nav-item')
+                a.nav-link(href=nav.link)
+                  =nav.content
+  block content

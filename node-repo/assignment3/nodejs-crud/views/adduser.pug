@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    div.container.bg-dark.rounded.pb-5.pt-3.mt-2
+        h1.mt-3.text-white= title
+        div.mt-5
+            //Check if errors exist
+            if errors
+                //If errors exist then loop through the array and display each error
+                each err in errors
+                    div.alert.alert-danger.alert-dismissible.fade.show.mt-3(role="alert")
+                        button.close.p-0.mr-2(type="button" data-dismiss="alert" aria-label="Close")
+                            span.h5.p-0(aria-hidden="true") &times;
+                        p.h6.mb-0= err.msg
+
+            //Create add form
+            form(method='POST' action='/addeduser')
+                div.form-group
+                    label.text-white(for='fname') First Name:
+                    input#fname.form-control(type='text', placeholder='John' name='fname' required)
+                div.form-group
+                    label.text-white(for='lname') First Name:
+                    input#lname.form-control(type='text', placeholder='Doe' name='lname' required)
+                div.form-group
+                    label.text-white(for='email') Email:
+                    input#email.form-control(type='email', placeholder='name@email.com' name='email' required)
+                div.form-group
+                    label.text-white(for='password') Password:
+                    input#password.form-control(type='password' name='password' required)
+                div.form-group
+                    label.text-white(for='password2') Confirm Password:
+                    input#password2.form-control(type='password' name='password2' required)
+                button.btn.btn-primary(type='submit') Add User

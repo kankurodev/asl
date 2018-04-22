@@ -1,0 +1,17 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #5D5D5D;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#users li {
+  background-color: #6c757d;
+}
+
+#users li:nth-child(2n+1) {
+  background-color: #1F1F1F;
+}
