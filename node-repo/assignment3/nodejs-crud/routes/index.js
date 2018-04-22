@@ -8,7 +8,7 @@ const db = mysql.createConnection({
     password: "root",
     port: 8889,
     database: "node_crud"
-})
+});
 
 db.connect((err) => {
     if (err){
@@ -178,7 +178,7 @@ router.post('/editeduser', function(req, res, next) {
         var user = {"fname":firstName, "lname":lastName, "email":uEmail, "password":userPass};
 
         //If no errors, then edit the user and render the users page
-        var sql = "update users set ?";
+        var sql = "update users set ? where id = "+req.query.id;
         db.query(sql, user, (err, results) => {
             if(err) {
                 console.log(err);
@@ -190,7 +190,7 @@ router.post('/editeduser', function(req, res, next) {
                     res.render('users', {
                         title: 'Users',
                         users: results,
-                        message: "User Added!",
+                        message: "User Updated!",
                         navItems: [
                             {link:'/',content:'Home'},
                             {link:'/register',content:'Register'},
