@@ -14,12 +14,12 @@ block content
                         p.h6.mb-0= err.msg
 
             //Create edit form
-            form(method='POST' action='/editeduser')
+            form(method='POST' action='/editeduser/?id='+user[0].id)
                 div.form-group
                     label.text-white(for='fname') First Name:
                     input#fname.form-control(type='text', value=user[0].fname name='fname' required)
                 div.form-group
-                    label.text-white(for='lname') First Name:
+                    label.text-white(for='lname') Last Name:
                     input#lname.form-control(type='text', value=user[0].lname name='lname' required)
                 div.form-group
                     label.text-white(for='email') Email:
