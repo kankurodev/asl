@@ -1,6 +1,6 @@
-# Assignment: Set up Symfony
+# Assignment: Nodejs CRUD
 
-This assignment consists of an application built using nodejs, express, and pug. Within the application you will find all of the default files along with a few altered files to create a basic navigation and register form.
+This assignment focuses on the ability to create a CRUD application using Nodejs and MySQL. Within the application you will find a new users page which displays all current users in the db upon load and allows you to add, edit, or delete users.
 
 ### Contact
 
