@@ -9,17 +9,51 @@
             {# Loop through the nav array to display navigation #}
             {% for key,value in nav %}
 
-                {# Highlight current location in nav when needed #}
-                {% if app.request.pathInfo == value %}
-                    <li class="active nav-item"><a class="nav-link" href='{{ value }}' style="border-radius:4px;">{{ key }}</a></li>
+                {# Check if the current iteration is the profile link #}
+                {% if key == "Profile" %}
+
+                    {# Check if the session exists #}
+                    {% if session is defined %}
+
+                        {# Check if the session is set #}
+                        {% if session is not null %}
+
+                            {# Highlight current location in nav when needed #}
+                            {% if app.request.pathInfo == value %}
+                                <li class="active nav-item"><a class="nav-link" href='{{ value }}' style="border-radius:4px;">{{ key }}</a></li>
+                            {% else %}
+                                <li class="nav-item"><a class="nav-link" href='{{ value }}'>{{ key }}</a></li>
+                            {% endif %}
+
+                        {% else %}
+
+                            {#If sessionSet is empty then don't show the profile link#}
+
+                        {% endif %}
+                    {% endif %}
+
+                {# If not on the profile link then continue as normal #}
                 {% else %}
-                    <li class="nav-item"><a class="nav-link" href='{{ value }}'>{{ key }}</a></li>
+
+                    {# Highlight current location in nav when needed #}
+                    {% if app.request.pathInfo == value %}
+                        <li class="active nav-item"><a class="nav-link" href='{{ value }}' style="border-radius:4px;">{{ key }}</a></li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link" href='{{ value }}'>{{ key }}</a></li>
+                    {% endif %}
+
                 {% endif %}
 
             {% endfor %}
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-        </form>
+        {% if session is not defined %}
+            <form class="form-inline mt-2 mt-md-0" method="POST" action="/login">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+            </form>
+        {% else %}
+            <form class="form-inline mt-2 mt-md-0" method="POST" action="/logout">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+            </form>
+        {% endif %}
     </div>
 </nav>

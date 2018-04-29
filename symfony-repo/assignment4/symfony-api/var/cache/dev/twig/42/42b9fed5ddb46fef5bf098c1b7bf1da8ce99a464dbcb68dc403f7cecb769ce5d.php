@@ -45,36 +45,113 @@ class __TwigTemplate_f74ee35c6f59cb90e7ee79f00e1db40374c9b0a2991436e5c6b11365067
                 ";
             // line 13
             echo "                ";
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 13, $this->source); })()), "request", array()), "pathInfo", array()) == $context["value"])) {
+            if (($context["key"] == "Profile")) {
                 // line 14
-                echo "                    <li class=\"active nav-item\"><a class=\"nav-link\" href='";
-                echo twig_escape_filter($this->env, $context["value"], "html", null, true);
-                echo "' style=\"border-radius:4px;\">";
-                echo twig_escape_filter($this->env, $context["key"], "html", null, true);
-                echo "</a></li>
-                ";
-            } else {
+                echo "
+                    ";
                 // line 16
-                echo "                    <li class=\"nav-item\"><a class=\"nav-link\" href='";
-                echo twig_escape_filter($this->env, $context["value"], "html", null, true);
-                echo "'>";
-                echo twig_escape_filter($this->env, $context["key"], "html", null, true);
-                echo "</a></li>
+                echo "                    ";
+                if (array_key_exists("session", $context)) {
+                    // line 17
+                    echo "
+                        ";
+                    // line 19
+                    echo "                        ";
+                    if ( !(null === (isset($context["session"]) || array_key_exists("session", $context) ? $context["session"] : (function () { throw new Twig_Error_Runtime('Variable "session" does not exist.', 19, $this->source); })()))) {
+                        // line 20
+                        echo "
+                            ";
+                        // line 22
+                        echo "                            ";
+                        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 22, $this->source); })()), "request", array()), "pathInfo", array()) == $context["value"])) {
+                            // line 23
+                            echo "                                <li class=\"active nav-item\"><a class=\"nav-link\" href='";
+                            echo twig_escape_filter($this->env, $context["value"], "html", null, true);
+                            echo "' style=\"border-radius:4px;\">";
+                            echo twig_escape_filter($this->env, $context["key"], "html", null, true);
+                            echo "</a></li>
+                            ";
+                        } else {
+                            // line 25
+                            echo "                                <li class=\"nav-item\"><a class=\"nav-link\" href='";
+                            echo twig_escape_filter($this->env, $context["value"], "html", null, true);
+                            echo "'>";
+                            echo twig_escape_filter($this->env, $context["key"], "html", null, true);
+                            echo "</a></li>
+                            ";
+                        }
+                        // line 27
+                        echo "
+                        ";
+                    } else {
+                        // line 29
+                        echo "
+                            ";
+                        // line 31
+                        echo "
+                        ";
+                    }
+                    // line 33
+                    echo "                    ";
+                }
+                // line 34
+                echo "
+                ";
+                // line 36
+                echo "                ";
+            } else {
+                // line 37
+                echo "
+                    ";
+                // line 39
+                echo "                    ";
+                if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 39, $this->source); })()), "request", array()), "pathInfo", array()) == $context["value"])) {
+                    // line 40
+                    echo "                        <li class=\"active nav-item\"><a class=\"nav-link\" href='";
+                    echo twig_escape_filter($this->env, $context["value"], "html", null, true);
+                    echo "' style=\"border-radius:4px;\">";
+                    echo twig_escape_filter($this->env, $context["key"], "html", null, true);
+                    echo "</a></li>
+                    ";
+                } else {
+                    // line 42
+                    echo "                        <li class=\"nav-item\"><a class=\"nav-link\" href='";
+                    echo twig_escape_filter($this->env, $context["value"], "html", null, true);
+                    echo "'>";
+                    echo twig_escape_filter($this->env, $context["key"], "html", null, true);
+                    echo "</a></li>
+                    ";
+                }
+                // line 44
+                echo "
                 ";
             }
-            // line 18
+            // line 46
             echo "
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 20
+        // line 48
         echo "        </ul>
-        <form class=\"form-inline mt-2 mt-md-0\">
-            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Login</button>
-        </form>
-    </div>
+        ";
+        // line 49
+        if ( !array_key_exists("session", $context)) {
+            // line 50
+            echo "            <form class=\"form-inline mt-2 mt-md-0\" method=\"POST\" action=\"/login\">
+                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Login</button>
+            </form>
+        ";
+        } else {
+            // line 54
+            echo "            <form class=\"form-inline mt-2 mt-md-0\" method=\"POST\" action=\"/logout\">
+                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Logout</button>
+            </form>
+        ";
+        }
+        // line 58
+        echo "    </div>
 </nav>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -96,7 +173,7 @@ class __TwigTemplate_f74ee35c6f59cb90e7ee79f00e1db40374c9b0a2991436e5c6b11365067
 
     public function getDebugInfo()
     {
-        return array (  73 => 20,  66 => 18,  58 => 16,  50 => 14,  47 => 13,  44 => 11,  39 => 10,  29 => 1,);
+        return array (  154 => 58,  148 => 54,  142 => 50,  140 => 49,  137 => 48,  130 => 46,  126 => 44,  118 => 42,  110 => 40,  107 => 39,  104 => 37,  101 => 36,  98 => 34,  95 => 33,  91 => 31,  88 => 29,  84 => 27,  76 => 25,  68 => 23,  65 => 22,  62 => 20,  59 => 19,  56 => 17,  53 => 16,  50 => 14,  47 => 13,  44 => 11,  39 => 10,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -112,18 +189,52 @@ class __TwigTemplate_f74ee35c6f59cb90e7ee79f00e1db40374c9b0a2991436e5c6b11365067
             {# Loop through the nav array to display navigation #}
             {% for key,value in nav %}
 
-                {# Highlight current location in nav when needed #}
-                {% if app.request.pathInfo == value %}
-                    <li class=\"active nav-item\"><a class=\"nav-link\" href='{{ value }}' style=\"border-radius:4px;\">{{ key }}</a></li>
+                {# Check if the current iteration is the profile link #}
+                {% if key == \"Profile\" %}
+
+                    {# Check if the session exists #}
+                    {% if session is defined %}
+
+                        {# Check if the session is set #}
+                        {% if session is not null %}
+
+                            {# Highlight current location in nav when needed #}
+                            {% if app.request.pathInfo == value %}
+                                <li class=\"active nav-item\"><a class=\"nav-link\" href='{{ value }}' style=\"border-radius:4px;\">{{ key }}</a></li>
+                            {% else %}
+                                <li class=\"nav-item\"><a class=\"nav-link\" href='{{ value }}'>{{ key }}</a></li>
+                            {% endif %}
+
+                        {% else %}
+
+                            {#If sessionSet is empty then don't show the profile link#}
+
+                        {% endif %}
+                    {% endif %}
+
+                {# If not on the profile link then continue as normal #}
                 {% else %}
-                    <li class=\"nav-item\"><a class=\"nav-link\" href='{{ value }}'>{{ key }}</a></li>
+
+                    {# Highlight current location in nav when needed #}
+                    {% if app.request.pathInfo == value %}
+                        <li class=\"active nav-item\"><a class=\"nav-link\" href='{{ value }}' style=\"border-radius:4px;\">{{ key }}</a></li>
+                    {% else %}
+                        <li class=\"nav-item\"><a class=\"nav-link\" href='{{ value }}'>{{ key }}</a></li>
+                    {% endif %}
+
                 {% endif %}
 
             {% endfor %}
         </ul>
-        <form class=\"form-inline mt-2 mt-md-0\">
-            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Login</button>
-        </form>
+        {% if session is not defined %}
+            <form class=\"form-inline mt-2 mt-md-0\" method=\"POST\" action=\"/login\">
+                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Login</button>
+            </form>
+        {% else %}
+            <form class=\"form-inline mt-2 mt-md-0\" method=\"POST\" action=\"/logout\">
+                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Logout</button>
+            </form>
+        {% endif %}
     </div>
 </nav>", "nav.html.twig", "/Users/tobyhorn/Documents/asl/asl/symfony-repo/assignment4/symfony-api/templates/nav.html.twig");
     }

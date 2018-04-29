@@ -63,6 +63,16 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'App\\Controller\\DefaultController::faq',  '_route' => 'app_default_faq',);
         }
 
+        // app_default_login
+        if ('/login' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\DefaultController::login',  '_route' => 'app_default_login',);
+        }
+
+        // app_default_logout
+        if ('/logout' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\DefaultController::logout',  '_route' => 'app_default_logout',);
+        }
+
         // app_default_profile
         if ('/profile' === $pathinfo) {
             return array (  '_controller' => 'App\\Controller\\DefaultController::profile',  '_route' => 'app_default_profile',);

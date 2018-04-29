@@ -16,6 +16,6 @@ if (!\class_exists(srcDevDebugProjectContainer::class, false)) {
 
 return new \ContainerPM31cxy\srcDevDebugProjectContainer(array(
     'container.build_hash' => 'PM31cxy',
-    'container.build_id' => 'c4660271',
-    'container.build_time' => 1524979035,
+    'container.build_id' => 'f572de83',
+    'container.build_time' => 1524988866,
 ));
