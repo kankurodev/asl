@@ -145,6 +145,6 @@ class __TwigTemplate_ec2285152f42b9f4c7b63d4c535915c8435ee6a736fbe659db166bf4e94
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
 {% endblock %}
-", "@WebProfiler/Collector/ajax.html.twig", "/Users/tobyhorn/Documents/node-repo/node-repo-symfony/vendor/symfony/web-profiler-bundle/Resources/views/Collector/ajax.html.twig");
+", "@WebProfiler/Collector/ajax.html.twig", "/Users/tobyhorn/Documents/asl/asl/symfony-repo/assignment4/symfony-api/vendor/symfony/web-profiler-bundle/Resources/views/Collector/ajax.html.twig");
     }
 }

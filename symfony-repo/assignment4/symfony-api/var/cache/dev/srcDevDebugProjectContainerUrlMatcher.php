@@ -28,39 +28,44 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             $canonicalMethod = 'GET';
         }
 
-        // app_about_index
-        if ('/about' === $pathinfo) {
-            return array (  '_controller' => 'App\\Controller\\About::index',  '_route' => 'app_about_index',);
-        }
-
-        // app_contact_index
-        if ('/contact' === $pathinfo) {
-            return array (  '_controller' => 'App\\Controller\\Contact::index',  '_route' => 'app_contact_index',);
-        }
-
-        // app_faq_index
-        if ('/faq' === $pathinfo) {
-            return array (  '_controller' => 'App\\Controller\\FAQ::index',  '_route' => 'app_faq_index',);
-        }
-
-        // app_home_index
+        // app_default_index
         if ('' === $trimmedPathinfo) {
-            $ret = array (  '_controller' => 'App\\Controller\\Home::index',  '_route' => 'app_home_index',);
+            $ret = array (  '_controller' => 'App\\Controller\\DefaultController::index',  '_route' => 'app_default_index',);
             if ('/' === substr($pathinfo, -1)) {
                 // no-op
             } elseif ('GET' !== $canonicalMethod) {
-                goto not_app_home_index;
+                goto not_app_default_index;
             } else {
-                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'app_home_index'));
+                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'app_default_index'));
             }
 
             return $ret;
         }
-        not_app_home_index:
+        not_app_default_index:
 
-        // app_register_index
+        // app_default_about
+        if ('/about' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\DefaultController::about',  '_route' => 'app_default_about',);
+        }
+
+        // app_default_register
         if ('/register' === $pathinfo) {
-            return array (  '_controller' => 'App\\Controller\\Register::index',  '_route' => 'app_register_index',);
+            return array (  '_controller' => 'App\\Controller\\DefaultController::register',  '_route' => 'app_default_register',);
+        }
+
+        // app_default_contact
+        if ('/contact' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\DefaultController::contact',  '_route' => 'app_default_contact',);
+        }
+
+        // app_default_faq
+        if ('/faq' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\DefaultController::faq',  '_route' => 'app_default_faq',);
+        }
+
+        // app_default_profile
+        if ('/profile' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\DefaultController::profile',  '_route' => 'app_default_profile',);
         }
 
         if (0 === strpos($pathinfo, '/_')) {

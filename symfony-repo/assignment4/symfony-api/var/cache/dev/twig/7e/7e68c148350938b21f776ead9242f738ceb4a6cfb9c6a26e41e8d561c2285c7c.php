@@ -396,6 +396,6 @@ class __TwigTemplate_152a692b164bba628326f391b1fb79bbbd2f8bf0a17bdd8088361705f7e
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "/Users/tobyhorn/Documents/node-repo/node-repo-symfony/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "/Users/tobyhorn/Documents/asl/asl/symfony-repo/assignment4/symfony-api/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
     }
 }

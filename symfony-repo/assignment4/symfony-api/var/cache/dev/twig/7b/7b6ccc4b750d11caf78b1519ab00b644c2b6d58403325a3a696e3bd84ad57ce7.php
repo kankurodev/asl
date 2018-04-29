@@ -376,6 +376,6 @@ class __TwigTemplate_8decf471622da404cb3dd68fcb0e2dd6608f93cc2ff8aafa9c4139742c9
         {% endfor %}
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/events.html.twig", "/Users/tobyhorn/Documents/node-repo/node-repo-symfony/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
+", "@WebProfiler/Collector/events.html.twig", "/Users/tobyhorn/Documents/asl/asl/symfony-repo/assignment4/symfony-api/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
     }
 }

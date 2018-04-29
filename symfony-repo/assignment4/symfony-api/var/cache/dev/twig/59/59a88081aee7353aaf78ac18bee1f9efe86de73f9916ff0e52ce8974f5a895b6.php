@@ -207,6 +207,6 @@ class __TwigTemplate_6bc1858344933fad78bf5c8532e93541a3d0a6e6698421834a5773bf4ff
         {{ include('@Twig/base_js.html.twig') }}
     </body>
 </html>
-", "@Twig/layout.html.twig", "/Users/tobyhorn/Documents/node-repo/node-repo-symfony/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
+", "@Twig/layout.html.twig", "/Users/tobyhorn/Documents/asl/asl/symfony-repo/assignment4/symfony-api/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
     }
 }

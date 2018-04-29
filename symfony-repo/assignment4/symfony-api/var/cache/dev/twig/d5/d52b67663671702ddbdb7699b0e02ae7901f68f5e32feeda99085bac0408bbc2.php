@@ -128,6 +128,6 @@ class __TwigTemplate_9d1e40990cce7e1b1ee29fd8df38bbbc153761bd28a2923763e231cd49d
         </tr>
     </tbody>
 </table>
-", "@Twig/Exception/traces_text.html.twig", "/Users/tobyhorn/Documents/node-repo/node-repo-symfony/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
+", "@Twig/Exception/traces_text.html.twig", "/Users/tobyhorn/Documents/asl/asl/symfony-repo/assignment4/symfony-api/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
     }
 }

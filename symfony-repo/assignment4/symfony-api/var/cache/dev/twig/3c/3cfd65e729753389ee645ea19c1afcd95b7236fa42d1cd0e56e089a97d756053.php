@@ -140,6 +140,6 @@ class __TwigTemplate_91e20c6599f795e7b0bad4c6df2057fcb8547230d70c11aedaea2f2f4f0
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "/Users/tobyhorn/Documents/node-repo/node-repo-symfony/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "/Users/tobyhorn/Documents/asl/asl/symfony-repo/assignment4/symfony-api/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
     }
 }

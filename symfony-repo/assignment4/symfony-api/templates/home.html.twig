@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home</title>
-        {% include 'bs-css.html.twig' %}
-    </head>
-    <header>
-        {% include 'nav.html.twig' with {'nav' : nav} %}
-    </header>
-    <body class="container-fluid">
-    <h1>{{ page }}</h1>
-    <br>
-    <h4>{{ message }}</h4>
+{% extends "base.html.twig" %}
 
-    {% include 'bs-scripts.html.twig' %}
-    </body>
-</html>
+{% block body %}
+    <h1>{{ page }}</h1>
+{% endblock %}
 

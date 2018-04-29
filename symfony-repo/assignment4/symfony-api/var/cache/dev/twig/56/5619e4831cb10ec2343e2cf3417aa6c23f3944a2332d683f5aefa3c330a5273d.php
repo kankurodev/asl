@@ -1127,6 +1127,6 @@ class __TwigTemplate_609a79bdcb65c2b8e4b228b9aea43f337cebc6c6548bf1505215676ebdd
         </table>
     {% endif %}
 {% endblock %}
-", "@Security/Collector/security.html.twig", "/Users/tobyhorn/Documents/node-repo/node-repo-symfony/vendor/symfony/security-bundle/Resources/views/Collector/security.html.twig");
+", "@Security/Collector/security.html.twig", "/Users/tobyhorn/Documents/asl/asl/symfony-repo/assignment4/symfony-api/vendor/symfony/security-bundle/Resources/views/Collector/security.html.twig");
     }
 }

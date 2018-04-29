@@ -474,6 +474,6 @@ class __TwigTemplate_7ec4d61e8245c14a56b1b1b815a872ea3c1fb929c842d2c105c30cb0d52
         {% endif %}
     </div>
 </div>
-", "@Twig/Exception/exception.html.twig", "/Users/tobyhorn/Documents/node-repo/node-repo-symfony/vendor/symfony/twig-bundle/Resources/views/Exception/exception.html.twig");
+", "@Twig/Exception/exception.html.twig", "/Users/tobyhorn/Documents/asl/asl/symfony-repo/assignment4/symfony-api/vendor/symfony/twig-bundle/Resources/views/Exception/exception.html.twig");
     }
 }

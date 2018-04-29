@@ -417,6 +417,6 @@ class __TwigTemplate_8a96683a441632fad7826d4a08ca5bfe934355a4941030196f98443300d
     });
 
 /*]]>*/</script>
-", "@Twig/base_js.html.twig", "/Users/tobyhorn/Documents/node-repo/node-repo-symfony/vendor/symfony/twig-bundle/Resources/views/base_js.html.twig");
+", "@Twig/base_js.html.twig", "/Users/tobyhorn/Documents/asl/asl/symfony-repo/assignment4/symfony-api/vendor/symfony/twig-bundle/Resources/views/base_js.html.twig");
     }
 }

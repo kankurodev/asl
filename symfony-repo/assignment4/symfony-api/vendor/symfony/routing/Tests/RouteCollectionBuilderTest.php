@@ -269,7 +269,7 @@ class RouteCollectionBuilderTest extends TestCase
         $loader = $this->getMockBuilder('Symfony\Component\Config\Loader\LoaderInterface')->getMock();
         $routes = new RouteCollectionBuilder($loader);
 
-        $routes->add('homepage', 'MainController::homepageAction', 'homepage');
+        $routes->add('homepage', 'DefaultController.php::homepageAction', 'homepage');
 
         $adminRoutes = $routes->createBuilder();
         $adminRoutes->add('/dashboard', 'AdminController::dashboardAction', 'admin_dashboard');
