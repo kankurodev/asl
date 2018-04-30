@@ -48,6 +48,11 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'App\\Controller\\DefaultController::about',  '_route' => 'app_default_about',);
         }
 
+        // app_default_googleauth
+        if ('/auth/google' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\DefaultController::googleAuth',  '_route' => 'app_default_googleauth',);
+        }
+
         // app_default_register
         if ('/register' === $pathinfo) {
             return array (  '_controller' => 'App\\Controller\\DefaultController::register',  '_route' => 'app_default_register',);

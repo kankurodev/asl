@@ -4,8 +4,7 @@
     {% if user is defined %}
         <h1>Hello {{ user.name }}!</h1>
         <br>
-        <img src="{{ user.img }}" alt="{{ user.name }}'s avatar" />
-        <p>Your Email: {{ user.email }}</p>
+        <img src="{{ user.picture }}" alt="{{ user.name }}'s avatar" />
     {% else %}
         <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
             <button class="close p-0 mr-2" type="button" data-dismiss="alert" aria-label="Close">

@@ -57,7 +57,7 @@ class __TwigTemplate_f74ee35c6f59cb90e7ee79f00e1db40374c9b0a2991436e5c6b11365067
                         ";
                     // line 19
                     echo "                        ";
-                    if ( !(null === (isset($context["session"]) || array_key_exists("session", $context) ? $context["session"] : (function () { throw new Twig_Error_Runtime('Variable "session" does not exist.', 19, $this->source); })()))) {
+                    if ( !twig_test_empty((isset($context["session"]) || array_key_exists("session", $context) ? $context["session"] : (function () { throw new Twig_Error_Runtime('Variable "session" does not exist.', 19, $this->source); })()))) {
                         // line 20
                         echo "
                             ";
@@ -136,21 +136,25 @@ class __TwigTemplate_f74ee35c6f59cb90e7ee79f00e1db40374c9b0a2991436e5c6b11365067
         // line 48
         echo "        </ul>
         ";
-        // line 49
-        if ( !array_key_exists("session", $context)) {
-            // line 50
+        // line 50
+        echo "        ";
+        if (twig_test_empty((isset($context["session"]) || array_key_exists("session", $context) ? $context["session"] : (function () { throw new Twig_Error_Runtime('Variable "session" does not exist.', 50, $this->source); })()))) {
+            // line 51
             echo "            <form class=\"form-inline mt-2 mt-md-0\" method=\"POST\" action=\"/login\">
                 <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Login</button>
             </form>
+
         ";
+            // line 56
+            echo "        ";
         } else {
-            // line 54
+            // line 57
             echo "            <form class=\"form-inline mt-2 mt-md-0\" method=\"POST\" action=\"/logout\">
                 <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Logout</button>
             </form>
         ";
         }
-        // line 58
+        // line 61
         echo "    </div>
 </nav>";
         
@@ -173,7 +177,7 @@ class __TwigTemplate_f74ee35c6f59cb90e7ee79f00e1db40374c9b0a2991436e5c6b11365067
 
     public function getDebugInfo()
     {
-        return array (  154 => 58,  148 => 54,  142 => 50,  140 => 49,  137 => 48,  130 => 46,  126 => 44,  118 => 42,  110 => 40,  107 => 39,  104 => 37,  101 => 36,  98 => 34,  95 => 33,  91 => 31,  88 => 29,  84 => 27,  76 => 25,  68 => 23,  65 => 22,  62 => 20,  59 => 19,  56 => 17,  53 => 16,  50 => 14,  47 => 13,  44 => 11,  39 => 10,  29 => 1,);
+        return array (  158 => 61,  152 => 57,  149 => 56,  143 => 51,  140 => 50,  137 => 48,  130 => 46,  126 => 44,  118 => 42,  110 => 40,  107 => 39,  104 => 37,  101 => 36,  98 => 34,  95 => 33,  91 => 31,  88 => 29,  84 => 27,  76 => 25,  68 => 23,  65 => 22,  62 => 20,  59 => 19,  56 => 17,  53 => 16,  50 => 14,  47 => 13,  44 => 11,  39 => 10,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -192,11 +196,11 @@ class __TwigTemplate_f74ee35c6f59cb90e7ee79f00e1db40374c9b0a2991436e5c6b11365067
                 {# Check if the current iteration is the profile link #}
                 {% if key == \"Profile\" %}
 
-                    {# Check if the session exists #}
+                    {# Make sure the session is defined #}
                     {% if session is defined %}
 
-                        {# Check if the session is set #}
-                        {% if session is not null %}
+                        {# Check if the session is empty, if not then add the profile link #}
+                        {% if session is not empty %}
 
                             {# Highlight current location in nav when needed #}
                             {% if app.request.pathInfo == value %}
@@ -207,7 +211,7 @@ class __TwigTemplate_f74ee35c6f59cb90e7ee79f00e1db40374c9b0a2991436e5c6b11365067
 
                         {% else %}
 
-                            {#If sessionSet is empty then don't show the profile link#}
+                            {# If session is empty then don't show the profile link #}
 
                         {% endif %}
                     {% endif %}
@@ -226,10 +230,13 @@ class __TwigTemplate_f74ee35c6f59cb90e7ee79f00e1db40374c9b0a2991436e5c6b11365067
 
             {% endfor %}
         </ul>
-        {% if session is not defined %}
+        {# Check if the session is empty, if so display the login button #}
+        {% if session is empty %}
             <form class=\"form-inline mt-2 mt-md-0\" method=\"POST\" action=\"/login\">
                 <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Login</button>
             </form>
+
+        {# If the session isn't empty then display the logout button #}
         {% else %}
             <form class=\"form-inline mt-2 mt-md-0\" method=\"POST\" action=\"/logout\">
                 <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Logout</button>

@@ -12,11 +12,11 @@
                 {# Check if the current iteration is the profile link #}
                 {% if key == "Profile" %}
 
-                    {# Check if the session exists #}
+                    {# Make sure the session is defined #}
                     {% if session is defined %}
 
-                        {# Check if the session is set #}
-                        {% if session is not null %}
+                        {# Check if the session is empty, if not then add the profile link #}
+                        {% if session is not empty %}
 
                             {# Highlight current location in nav when needed #}
                             {% if app.request.pathInfo == value %}
@@ -27,7 +27,7 @@
 
                         {% else %}
 
-                            {#If sessionSet is empty then don't show the profile link#}
+                            {# If session is empty then don't show the profile link #}
 
                         {% endif %}
                     {% endif %}
@@ -46,10 +46,13 @@
 
             {% endfor %}
         </ul>
-        {% if session is not defined %}
+        {# Check if the session is empty, if so display the login button #}
+        {% if session is empty %}
             <form class="form-inline mt-2 mt-md-0" method="POST" action="/login">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
             </form>
+
+        {# If the session isn't empty then display the logout button #}
         {% else %}
             <form class="form-inline mt-2 mt-md-0" method="POST" action="/logout">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>

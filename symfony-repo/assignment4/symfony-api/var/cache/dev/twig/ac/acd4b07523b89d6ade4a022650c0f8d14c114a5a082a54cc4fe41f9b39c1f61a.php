@@ -59,17 +59,13 @@ class __TwigTemplate_5aa8b7d2fe9aa60bdffdedc670a9049ff515a8b3ef540e9d3d1df854bde
         <br>
         <img src=\"";
             // line 7
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 7, $this->source); })()), "img", array()), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 7, $this->source); })()), "picture", array()), "html", null, true);
             echo "\" alt=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 7, $this->source); })()), "name", array()), "html", null, true);
             echo "'s avatar\" />
-        <p>Your Email: ";
-            // line 8
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 8, $this->source); })()), "email", array()), "html", null, true);
-            echo "</p>
     ";
         } else {
-            // line 10
+            // line 9
             echo "        <div class=\"alert alert-danger alert-dismissible fade show mt-3\" role=\"alert\">
             <button class=\"close p-0 mr-2\" type=\"button\" data-dismiss=\"alert\" aria-label=\"Close\">
                 <span class=\"h5 p-0\" aria-hidden=\"true\">&times;</span>
@@ -98,7 +94,7 @@ class __TwigTemplate_5aa8b7d2fe9aa60bdffdedc670a9049ff515a8b3ef540e9d3d1df854bde
 
     public function getDebugInfo()
     {
-        return array (  73 => 10,  68 => 8,  62 => 7,  56 => 5,  53 => 4,  44 => 3,  15 => 1,);
+        return array (  69 => 9,  62 => 7,  56 => 5,  53 => 4,  44 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -109,8 +105,7 @@ class __TwigTemplate_5aa8b7d2fe9aa60bdffdedc670a9049ff515a8b3ef540e9d3d1df854bde
     {% if user is defined %}
         <h1>Hello {{ user.name }}!</h1>
         <br>
-        <img src=\"{{ user.img }}\" alt=\"{{ user.name }}'s avatar\" />
-        <p>Your Email: {{ user.email }}</p>
+        <img src=\"{{ user.picture }}\" alt=\"{{ user.name }}'s avatar\" />
     {% else %}
         <div class=\"alert alert-danger alert-dismissible fade show mt-3\" role=\"alert\">
             <button class=\"close p-0 mr-2\" type=\"button\" data-dismiss=\"alert\" aria-label=\"Close\">
