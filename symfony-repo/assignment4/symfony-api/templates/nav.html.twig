@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Symfony API</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+
+            {# Loop through the nav array to display navigation #}
+            {% for key,value in nav %}
+
+                {# Check if the current iteration is the profile link #}
+                {% if key == "Profile" %}
+
+                    {# Make sure the session is defined #}
+                    {% if session is defined %}
+
+                        {# Check if the session is empty, if not then add the profile link #}
+                        {% if session is not empty %}
+
+                            {# Highlight current location in nav when needed #}
+                            {% if app.request.pathInfo == value %}
+                                <li class="active nav-item"><a class="nav-link" href='{{ value }}' style="border-radius:4px;">{{ key }}</a></li>
+                            {% else %}
+                                <li class="nav-item"><a class="nav-link" href='{{ value }}'>{{ key }}</a></li>
+                            {% endif %}
+
+                        {% else %}
+
+                            {# If session is empty then don't show the profile link #}
+
+                        {% endif %}
+                    {% endif %}
+
+                {# If not on the profile link then continue as normal #}
+                {% else %}
+
+                    {# Highlight current location in nav when needed #}
+                    {% if app.request.pathInfo == value %}
+                        <li class="active nav-item"><a class="nav-link" href='{{ value }}' style="border-radius:4px;">{{ key }}</a></li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link" href='{{ value }}'>{{ key }}</a></li>
+                    {% endif %}
+
+                {% endif %}
+
+            {% endfor %}
+        </ul>
+        {# Check if the session is empty, if so display the login button #}
+        {% if session is empty %}
+            <form class="form-inline mt-2 mt-md-0" method="POST" action="/login">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+            </form>
+
+        {# If the session isn't empty then display the logout button #}
+        {% else %}
+            <form class="form-inline mt-2 mt-md-0" method="POST" action="/logout">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</nav>

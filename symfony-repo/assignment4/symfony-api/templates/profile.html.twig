@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    {% if user is defined %}
+        <h1>Hello {{ user.name }}!</h1>
+        <br>
+        <img src="{{ user.picture }}" alt="{{ user.name }}'s avatar" />
+    {% else %}
+        <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+            <button class="close p-0 mr-2" type="button" data-dismiss="alert" aria-label="Close">
+                <span class="h5 p-0" aria-hidden="true">&times;</span>
+            </button>
+            <p class="h4 mb-0">Error: User does not exist!</p>
+        </div>
+    {% endif %}
+{% endblock %}
